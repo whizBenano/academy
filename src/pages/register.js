@@ -1,11 +1,15 @@
 import React from 'react'
+import Meta from '@/components/Meta'
 import styles from '../styles/Register.module.css'
 import pic from '../mages/social-media_flatline.svg'
 import Link from 'next/link'
-// import Leg from '../Leg/Leg'
+import Leg from '../components/Leg'
+import Image from 'next/image'
 
 const Register = () => {
     return <div className={styles.big}>
+        <Meta title={'Register'} />
+
         <div className={styles.boxe}>
             <h2>Sign Up</h2>
             <form>
@@ -38,10 +42,10 @@ const Register = () => {
             </form>
         </div>
         <div className={styles.pic}>
-            <img src={pic} alt='' />
+            <Image src={pic} alt='' />
         </div>
 
-        {/* <Leg /> */}
+        <Leg />
     </div>
 }
 

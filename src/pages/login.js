@@ -1,28 +1,37 @@
-import Head from 'next/head'
+import Meta from '../components/Meta'
 import styles from '../styles/Login.module.css'
 import Link from 'next/link'
+import Leg from '../components/Leg'
+import pic from '../mages/secure_login.svg'
+import Image from 'next/image'
 
 const Login = () => (
   <div className={styles.big}>
-    <Head>
-      <title>Login</title>
-    </Head>
+    <Meta title={'Login'} />
 
     <div className={styles.box}>
-      <h2>Login</h2>
-      <div className={styles.enter}>
-        <input type='text' required />
-        <label>Username</label>
-      </div>
-      <div className={styles.enter}>
-        <input type='password' required />
-        <label>Password</label>
-      </div>
+      <form>
+        <h2>Login</h2>
+        <div className={styles.enter}>
+          <input type='text' required />
+          <label>Username</label>
+        </div>
+        <div className={styles.enter}>
+          <input type='password' required />
+          <label>Password</label>
+        </div>
 
-      <center>forgot password? click <Link href='/reset'>here</Link></center>
-      <button className={styles.lnk}>LOGIN</button>
-      <center><p className={styles.signup}>not a member? click <Link href='/register'>here</Link> to sign up</p></center>
+        <center>forgot password? click <Link href='/reset'>here</Link></center>
+        <button className={styles.lnk}>LOGIN</button>
+        <center><p className={styles.signup}>not a member? click <Link href='/register'>here</Link> to sign up</p></center>
+      </form>
     </div>
+
+    <div className='pic'>
+      <Image src={pic} alt='' />
+    </div>
+
+    <Leg />
   </div>
 )
 
